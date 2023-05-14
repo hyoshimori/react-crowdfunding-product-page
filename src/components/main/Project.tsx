@@ -5,11 +5,12 @@ import About from './About';
 
 import styles from '../style/Project.module.css';
 
+import "normalize.css";
+
 const Project = () => {
 
   return (
     <div className={styles.body}>
-      <h2>Project Page</h2>
       <Banner/>
       <Nav/>
       <Price/>
