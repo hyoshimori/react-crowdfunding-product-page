@@ -1,3 +1,16 @@
 .body {
-  background-color: red;
+  color: white;
+  position: absolute;
+}
+
+.nav{
+  width: 100vw;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav__links__right span{
+  margin: 0 20px;
 }

@@ -1,3 +1,32 @@
 .body {
   background-color: yellow;
+  width: 60vw;
+  margin: 0 auto;
+  border-radius: 7px;
+  padding: 10px;
+}
+
+.about__upper__name__and__price__top{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.about__lower__price{
+  display: flex;
+  align-items: center;
+}
+
+.about__lower__price__and__select__button__bottom{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.about__upper, .about__middle__description{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
 }

@@ -1,0 +1,37 @@
+.body {
+  background-color: mediumseagreen;
+  width: 60vw;
+  margin: 0 auto;
+  border-radius: 7px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+
+.body span{
+  font-size: 0.9rem;
+}
+
+.body h2{
+  font-size: 1.2rem;
+}
+
+.body span, .body h2{
+  align-self: center;
+}
+
+.project__name__and__description{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
