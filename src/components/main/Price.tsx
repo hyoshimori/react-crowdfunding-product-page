@@ -9,7 +9,7 @@ const Price = () => {
         <p>$89,914</p>
         <span>of $100,000 backerd</span>
       </div>
-      <div>
+      <div className={styles.middle__div}>
         <p>5,007</p>
         <span>total backers</span>
       </div>

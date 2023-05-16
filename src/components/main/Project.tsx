@@ -13,9 +13,11 @@ const Project = () => {
   return (
     <div className={styles.body}>
       <Banner/>
-      <BackThisProject />
-      <Price/>
-      <About/>
+      <div className={styles.porject__body}>
+        <BackThisProject />
+        <Price/>
+        <About/>
+      </div>
     </div>
   );
 };

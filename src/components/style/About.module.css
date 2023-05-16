@@ -1,12 +1,22 @@
 .body {
-  background-color: yellow;
   width: 60vw;
   margin: 0 auto;
-  border-radius: 7px;
   padding: 10px;
+  border-radius: 10px;
+  border: solid 1px rgb(245, 245, 245);
+  background-color: white;
+}
+
+.green{
+  color: #59B3A4;
+}
+
+.grey__color{
+  color: grey;
 }
 
 .about__upper__name__and__price__top{
+  padding: 20px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -15,6 +25,12 @@
 .about__lower__price{
   display: flex;
   align-items: center;
+}
+
+.about__lower{
+  border-radius: 10px;
+  border: solid 1px rgb(240, 240, 240);
+  margin-bottom: 20px;
 }
 
 .about__lower__price__and__select__button__bottom{
@@ -26,7 +42,15 @@
 .about__upper, .about__middle__description{
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   align-items: center;
   padding: 20px;
+}
+
+.about__this__project{
+  padding: 20px;
+}
+
+.left{
+  margin-left: 10px;
 }
