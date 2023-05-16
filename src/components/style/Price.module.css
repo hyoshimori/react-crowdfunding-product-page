@@ -1,9 +1,20 @@
 .body {
   width: 60vw;
   margin: 0 auto;
-  border-radius: 7px;
+  border-radius: 10px;
+  border: solid 1px rgb(245, 245, 245);
+  background-color: white;
   padding: 10px;
-  background-color: aquamarine;
   display: flex;
   justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.middle__div{
+  border-right: 1px solid rgb(235, 235, 235);
+  border-left: 1px solid rgb(235, 235, 235);
+}
+
+.body div{
+  padding: 20px;
 }
