@@ -37,6 +37,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding-bottom: 20px;
 }
 
 .about__upper, .about__middle__description{
@@ -53,4 +54,15 @@
 
 .left{
   margin-left: 10px;
+}
+
+.button{
+  background-color: #167A73;
+  color: white;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-weight: 500;
 }

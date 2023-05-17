@@ -28,7 +28,7 @@ const About = () => {
           <div className={styles.about__lower__price}>
             <p>101</p><span className={`${styles.grey__color} ${styles.left}`}>left</span>
           </div>
-          <button onClick={handleButtonClick}>View Details</button>
+          <button className={styles.button} onClick={handleButtonClick}>View Details</button>
         </div>
       </div>
       {showDetail && <Detail />}
@@ -42,7 +42,7 @@ const About = () => {
           <div className={styles.about__lower__price}>
             <p>64</p><span className={`${styles.grey__color} ${styles.left}`}>left</span>
           </div>
-          <button onClick={handleButtonClick}>View Details</button>
+          <button className={styles.button} onClick={handleButtonClick}>View Details</button>
         </div>
       </div>
       {showDetail && <Detail />}
@@ -56,7 +56,7 @@ const About = () => {
           <div className={styles.about__lower__price}>
             <p>0</p><span className={`${styles.grey__color} ${styles.left}`}>left</span>
           </div>
-          <button onClick={handleButtonClick}>View Details</button>
+          <button className={styles.button} onClick={handleButtonClick}>View Details</button>
         </div>
       </div>
       {showDetail && <Detail />}
