@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import Detail from './Detail';
+import Detail from './ThankYou';
 
 import styles from '../style/About.module.css';
 
