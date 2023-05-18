@@ -4,8 +4,15 @@ import styles from '../style/BackThisProject.module.css';
 
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 
+import Detail from './Detail';
+
 const BackThisProject = () => {
   const [buttonToggle, setButtonToggle] = useState(false);
+  const [backToggle, setBackToggle] = useState(false);
+
+  const backThisProjectClick = () => {
+    setBackToggle(!backToggle);
+  };
 
   const handleClick = () => {
     console.log('button clicked')
@@ -20,7 +27,7 @@ const BackThisProject = () => {
         <span className={styles.grey__color}>A beautiful & handcrafted monitor stand to reduce neck and eye strain</span>
       </div>
         <div className={styles.buttons}>
-          <button className={styles.button}>Back this project</button>
+          <button className={styles.button} onClick={backThisProjectClick}>Back this project</button>
           <button
             className={`${styles.bookmark} ${buttonToggle ? styles.bookmark__grey : ''}`}
             onClick={handleClick}
@@ -31,6 +38,7 @@ const BackThisProject = () => {
             Bookmark
           </button>
         </div>
+        {backToggle && <Detail />}
     </div>
   );
 }

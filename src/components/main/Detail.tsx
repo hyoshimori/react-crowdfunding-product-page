@@ -5,7 +5,7 @@ import styles from '../style/Detail.module.css';
 const Detail = () => {
   return (
     <div className={styles.body}>
-      <h2 className={styles.test}>Detail Page</h2>
+      <h2>Detail</h2>
     </div>
   );
 }
