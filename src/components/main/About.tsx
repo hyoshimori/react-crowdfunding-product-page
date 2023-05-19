@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import Detail from './ThankYou';
+import ThankYou from './ThankYou';
 
 import styles from '../style/About.module.css';
 
@@ -35,6 +35,9 @@ const About = () => {
     setSelectedPerk(selectedPerk === index ? -1 : index); // Toggle selected perk, or deselect if it's already selected
   };
 
+  const resetPerkSelection = () => {
+    setSelectedPerk(-1);
+  };
 
   return (
     <div className={styles.body}>
@@ -57,7 +60,7 @@ const About = () => {
             </div>
             <button className={styles.button} onClick={() => handleButtonClick(index)}>Select Details</button>
           </div>
-          {selectedPerk === index && <Detail />}
+          {selectedPerk === index && <ThankYou resetPerkSelection={resetPerkSelection}/>}
         </div>
       ))}
     </div>
