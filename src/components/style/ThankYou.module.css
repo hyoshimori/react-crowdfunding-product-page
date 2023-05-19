@@ -1,3 +1,66 @@
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* black with 50% opacity */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* ensure it's below the body */
+}
+
+.hide__overlay {
+  display: none;
+}
+
 .body {
+  z-index: 2; /* ensure it's above the overlay */
   background-color: white;
+  width: 40vw;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px 40px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  border-radius: 5px;
+}
+
+.hide__body{
+  display: none;
+}
+
+.check{
+  height: 40px;
+  width: 40px;
+  background-color: #3BB3AC;
+  color: white;
+  border-radius: 50%;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.gotIt__button{
+    background-color: #167A73;
+  color: white;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.thanks__for{
+  margin-bottom: 20px;
+}
+
+.thanks__for__message{
+  margin-bottom: 20px;
+  color: grey;
 }
