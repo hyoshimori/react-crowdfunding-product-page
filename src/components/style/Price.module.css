@@ -6,8 +6,15 @@
   background-color: white;
   padding: 10px;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   margin-bottom: 20px;
+}
+
+.body__and__progress{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .middle__div{
@@ -17,4 +24,22 @@
 
 .body div{
   padding: 20px;
+}
+
+.body progress{
+  width: 90%;
+  border-radius: 25px;
+  height: 10px;
+  margin: 20px;
+  align-self: center;
+}
+
+.body progress::-webkit-progress-value {
+  border-radius: 25px;
+  background-color: #3BB4AE;
+}
+
+.body progress::-webkit-progress-bar {
+  border-radius: 25px;
+  background-color: #F4F4F4;
 }
