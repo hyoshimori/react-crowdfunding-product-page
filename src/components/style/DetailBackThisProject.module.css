@@ -1,0 +1,28 @@
+.body{
+  background-color: blueviolet;
+  padding: 20px;
+}
+
+.details__projects__upper{
+  background-color: aqua;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.details__projects__upper__name__and__price{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.details__projects__upper__name__and__price span{
+  margin-left: 20px;
+}
+
+.details__projects{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
