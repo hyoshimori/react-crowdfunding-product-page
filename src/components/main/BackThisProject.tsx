@@ -4,7 +4,8 @@ import styles from '../style/BackThisProject.module.css';
 
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 
-import Detail from './Detail';
+// import Detail from './Detail';
+import DetailBackThisProject from './DetailBackThisProject';
 
 const BackThisProject = () => {
   const [buttonToggle, setButtonToggle] = useState(false);
@@ -38,7 +39,7 @@ const BackThisProject = () => {
             Bookmark
           </button>
         </div>
-        {backToggle && <Detail />}
+        {backToggle && <DetailBackThisProject />}
     </div>
   );
 }
