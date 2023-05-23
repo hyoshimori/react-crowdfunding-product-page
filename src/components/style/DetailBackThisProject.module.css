@@ -1,28 +1,49 @@
 .body{
-  background-color: blueviolet;
   padding: 20px;
 }
 
 .details__projects__upper{
-  background-color: aqua;
   display: flex;
-  width: 100%;
+  width: 45vw;
+  align-items: center;
   justify-content: space-between;
 }
 
 .details__projects__upper__name__and__price{
   display: flex;
   flex-direction: row;
-  align-items: center;
+  color: #167A73;
 }
 
-.details__projects__upper__name__and__price span{
+.details__projects__upper__name__and__price span,
+.details__projects__upper__name__and__price h2{
   margin-left: 20px;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .details__projects{
   display: flex;
   flex-direction: row;
   align-items: center;
+  /* cursor: pointer; */
+  padding-bottom: 20px;
+}
+
+span.details__projects__lower{
+  width: 40vw;
+  display: block;
+  text-align: start;
+  margin-bottom: 20px;
+  margin-left: 45px;
+  color: grey;
+  /* cursor: pointer; */
+}
+
+.details__projects__upper__and__lower{
+  padding: 20px 10px;
+  border-radius: 5px;
+  border: solid 1px rgb(235, 235, 235);
+  margin-bottom: 20px;
   cursor: pointer;
 }

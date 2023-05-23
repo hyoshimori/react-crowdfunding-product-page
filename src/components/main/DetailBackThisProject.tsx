@@ -26,25 +26,26 @@ const DetailBackThisProject = () => {
         perks && perks.map((el, index) => {
           console.log(el.name)
           return(
-            <div key={index} className={styles.details__projects} onClick={() => handleClick(index)}>
-            {
-              // when the index of the loop is same as the state, button is checked
-              buttonToggele === index ? <RadioButtonCheckedIcon /> : <RadioButtonUncheckedIcon />
-            }
-            <div>
-              <div className={styles.details__projects__upper}>
-                <div className={styles.details__projects__upper__name__and__price}>
-                  <h2>{el.name}</h2>
-                  <span>{el.minPledge}</span>
+            <div className={styles.details__projects__upper__and__lower} onClick={() => handleClick(index)}>
+              <div key={index} className={styles.details__projects}>
+                {
+                  // when the index of the loop is same as the state, button is checked
+                  buttonToggele === index ? <RadioButtonCheckedIcon /> : <RadioButtonUncheckedIcon />
+                }
+                <div>
+                  <div className={styles.details__projects__upper}>
+                    <div className={styles.details__projects__upper__name__and__price}>
+                      <h2>{el.name}</h2>
+                      <span>Pledge {el.minPledge} or more</span>
+                    </div>
+                    <span>{el.numbersLeft} <span style={{  color: 'grey'}}>left</span></span>
+                  </div>
                 </div>
-                <span>{el.numbersLeft}</span>
               </div>
-              <span>{el.description}</span>
+              <span onClick={() => handleClick(index)} className={styles.details__projects__lower}>{el.description}</span>
             </div>
-          </div>
         )})
       }
-    <p>aaa</p>
     </div>
   );
 }
