@@ -13,4 +13,5 @@
 
 .nav__links__right span{
   margin: 0 20px;
+  cursor: pointer;
 }
