@@ -13,24 +13,27 @@
 
 .body__and__progress{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
 .middle__div{
   border-right: 1px solid rgb(235, 235, 235);
   border-left: 1px solid rgb(235, 235, 235);
+  padding: 0 5vw 0 5vw;
 }
 
 .body div{
-  padding: 20px;
+  margin: 20px 0 20px 0;
 }
+
+
 
 .body progress{
   width: 90%;
   border-radius: 25px;
   height: 10px;
-  margin: 20px;
+  margin: 0 20px 20px 20px;
   align-self: center;
 }
 
@@ -42,4 +45,14 @@
 .body progress::-webkit-progress-bar {
   border-radius: 25px;
   background-color: #F4F4F4;
+}
+
+.body p{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.body span{
+  font-size: 0.9rem;
+  color: grey;
 }
