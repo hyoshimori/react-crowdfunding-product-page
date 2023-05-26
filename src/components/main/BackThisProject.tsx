@@ -36,7 +36,7 @@ const BackThisProject = () => {
             <div className={`${styles.bookmark__design} ${buttonToggle ? styles.bookmark__design__grey : ''}`}>
               <BookmarkIcon/>
             </div>
-            Bookmark
+            <span className={styles.bookmark__design__letters}>Bookmark</span>
           </button>
         </div>
         {backToggle && <DetailBackThisProject />}
