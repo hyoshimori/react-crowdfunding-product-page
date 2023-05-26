@@ -8,6 +8,14 @@
   text-align: center;
 }
 
+.desciption__message{
+  text-align: start;
+  font-size: 0.9rem;
+  margin-top: 20px;
+  color: grey;
+  line-height: 1.6;
+}
+
 .green{
   color: #59B3A4;
 }
@@ -19,7 +27,7 @@
 .about__upper__name__and__price__top{
   padding: 20px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -32,13 +40,16 @@
   border-radius: 10px;
   border: solid 1px rgb(240, 240, 240);
   margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .about__lower__price__and__select__button__bottom{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding-bottom: 20px;
+  margin: 0 20px;
 }
 
 .about__upper, .about__middle__description{
@@ -46,11 +57,18 @@
   flex-direction: column;
   /* justify-content: space-around; */
   align-items: center;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
+}
+
+.about__middle__description{
+  text-align: start;
+  line-height: 1.6;
+  font-size: 0.9rem;
 }
 
 .about__this__project{
-  padding: 20px;
+  padding: 20px 0 0 20px;
+  text-align: start;
 }
 
 .left{
