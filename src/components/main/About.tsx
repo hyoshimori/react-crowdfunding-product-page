@@ -9,6 +9,7 @@ import * as perkTypes from '../../../types/perk';
 const About = () => {
   const [selectedPerk, setSelectedPerk] = useState(-1); // Start with no perk selected
 
+  // perk mock up data as this is only the front end app //
   const perks: perkTypes.Perk[] = [
     {
       name: 'Bamboo Stand',
@@ -32,9 +33,11 @@ const About = () => {
 
 
   const handleButtonClick = (index: number) => {
-    setSelectedPerk(selectedPerk === index ? -1 : index); // Toggle selected perk, or deselect if it's already selected
+    // Toggle selected perk, or deselect if it's already selected
+    setSelectedPerk(selectedPerk === index ? -1 : index);
   };
 
+  // Passign this func to "handleButtonClick" func in ThankYou component to reset the state
   const resetPerkSelection = () => {
     setSelectedPerk(-1);
   };
@@ -46,7 +49,7 @@ const About = () => {
         <span className={`${styles.grey__color} ${styles.desciption__message}`}>The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen to a more comfortable viewing height. Placing your monitor at eye level has the potential to improve your posture and make you more comfortable while at work, helping you stay focused on the task at hand.</span>
         <span className={`${styles.grey__color} ${styles.desciption__message}`}>Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer to allow notepads, pens, and USB sticks to be stored under the stand.</span>
       </div>
-
+      {/* loop of perks from perkContext */}
       {perks.map((perk, index) => (
         <div key={index} className={styles.about__lower}>
           <div className={styles.about__upper__name__and__price__top}>
@@ -60,6 +63,7 @@ const About = () => {
             </div>
             <button className={styles.button} onClick={() => handleButtonClick(index)}>Select Details</button>
           </div>
+          {/* if the index selected is same as the index in the state */}
           {selectedPerk === index && <ThankYou resetPerkSelection={resetPerkSelection}/>}
         </div>
       ))}

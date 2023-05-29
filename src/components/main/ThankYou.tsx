@@ -8,11 +8,11 @@ interface ThankYouProps {
   resetPerkSelection: () => void;
 }
 
-// This thankYouProps does not return anything because the func is called directly and so it does not need to return anything
-
+// This thankYouProps does not return anything (so it is 'void') because the func is called directly and so it does not need to return anything
 const ThankYou: React.FC<ThankYouProps> = ({ resetPerkSelection }) => {
   const [gotItPerk, setgotItPerk] = useState(true);
 
+  // when called this, the state in About component is being reset
   const handleButtonClick = () => {
     setgotItPerk(!gotItPerk);
     resetPerkSelection();
