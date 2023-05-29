@@ -27,10 +27,15 @@ const DetailBackThisProject = () => {
           console.log(el.name)
           return(
             <div className={styles.details__projects__and__enter__your__pledge}>
-              <div className={styles.details__projects__upper__and__lower} onClick={() => handleClick(index)}>
+              <div className={buttonToggele !== index ? `${styles.details__projects__upper__and__lower}
+                                                         ${styles.details__projects__upper__and__lower__with__radius__and__color}`
+                                                         :
+                                                         `${styles.details__projects__upper__and__lower}`
+                                                        }
+                   onClick={() => handleClick(index)}>
                 <div key={index} className={styles.details__projects}>
                   {
-                    // when the index of the loop is same as the state, button is checked
+                    // when the index of the loop is same as the state, button is checked (changes the icon from unchecked to checked)
                     buttonToggele === index ? <RadioButtonCheckedIcon /> : <RadioButtonUncheckedIcon />
                   }
                   <div>
@@ -45,12 +50,13 @@ const DetailBackThisProject = () => {
                 </div>
                 <span onClick={() => handleClick(index)} className={styles.details__projects__lower}>{el.description}</span>
               </div>
+              {/* when the bottomToggle's id is the same as the one being clicked, show "Enter your pledge div" */}
               {
                 buttonToggele === index ?
                 <div className={styles.body__EnterYourPledge}>
                   <span style={{color: 'grey'}}>Enter your pledge</span>
                   <div className={styles.body__EnterYourPledge__right}>
-                    <input type="text" placeholder={'$'  + el.minPledge.toString()}/>
+                    <input type="text" placeholder={'$' + el.minPledge.toString()}/>
                     <button>Continue</button>
                   </div>
               </div>

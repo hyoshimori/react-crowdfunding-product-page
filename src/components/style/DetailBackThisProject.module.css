@@ -12,7 +12,10 @@
 .details__projects__upper__name__and__price{
   display: flex;
   flex-direction: row;
-  color: #167A73;
+}
+
+.details__projects__upper__name__and__price span{
+  color: #3EB3AC;
 }
 
 .details__projects__upper__name__and__price span,
@@ -44,7 +47,8 @@ span.details__projects__lower{
   padding: 20px 10px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  border: solid 1px rgb(235, 235, 235);
+  border: solid 2px #3EB3AC;
+  border-bottom-color: rgb(235, 235, 235);
   cursor: pointer;
   margin-top: 20px;
 }
@@ -53,14 +57,15 @@ span.details__projects__lower{
   margin-bottom: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
-  border: solid 1px rgb(235, 235, 235);
-  border-top: none;
+  border: solid 2px #3EB3AC;
+  border-top-color: rgb(235, 235, 235);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  margin-top: -1px;
 }
 
 .body__EnterYourPledge button,
@@ -79,6 +84,7 @@ span.details__projects__lower{
   background-color: #3EB3AC;
   color: white;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .body__EnterYourPledge input{
@@ -96,4 +102,9 @@ span.details__projects__lower{
 .body__EnterYourPledge input::-webkit-input-placeholder{
   color: black;
   font-weight: bold;
+}
+
+.details__projects__upper__and__lower__with__radius__and__color{
+  border-radius: 5px;
+  border-color: rgb(235, 235, 235);
 }
