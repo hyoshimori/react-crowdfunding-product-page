@@ -29,43 +29,36 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* cursor: pointer; */
-  padding-bottom: 20px;
+  padding: 20px 20px;
 }
 
 span.details__projects__lower{
-  width: 40vw;
+  box-sizing: border-box;  /* includes padding and border in the element's total width */
+  width: 100%;
   display: block;
   text-align: start;
-  margin-bottom: 20px;
-  margin-left: 45px;
+  padding-bottom: 20px;
+  padding-left: 45px;
   color: grey;
-  /* cursor: pointer; */
+  padding-right: 20px;
 }
 
 .details__projects__upper__and__lower{
-  padding: 20px 10px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-radius: 5px;
   border: solid 2px #3EB3AC;
-  border-bottom-color: rgb(235, 235, 235);
   cursor: pointer;
   margin-top: 20px;
 }
 
 .body__EnterYourPledge{
-  margin-bottom: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border: solid 2px #3EB3AC;
-  border-top: none;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  position: relative;
+  border: solid 1px rgb(240, 240, 240);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  padding: 10px 20px;
 }
 
 .body__EnterYourPledge button,
@@ -111,17 +104,4 @@ span.details__projects__lower{
 
 .body__EnterYourPledge__border__bottom__none{
   border-bottom: none;
-}
-
-.details__projects__upper__and__lower__without__border__bottom{
-  border-bottom: none;
-}
-
-.line {
-  border: solid 1px rgb(235, 235, 235);
-  width: 99.3%;
-  margin: 0 auto;
-  position: absolute;
-  top: 0;
-  left: 0;
 }

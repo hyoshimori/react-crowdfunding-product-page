@@ -6,6 +6,8 @@ import { perkContext } from '../../contexts/perkContext';
 
 import { useContext } from 'react';
 
+import ThankYou from './ThankYou';
+
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
 
@@ -13,11 +15,21 @@ import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
 
 const DetailBackThisProject = () => {
   const [ buttonToggele, setButtonToggele ] = useState(-1);
+  const [ buttonToggelePledge, setButtonToggelePledge ] = useState(-1);
   const perks = useContext(perkContext);
 
+  // Passign this func to "handleButtonClick" func in ThankYou component to reset the state
+  const resetPledgeSelection = () => {
+    setButtonToggele(-1);
+    setButtonToggelePledge(-1);
+  };
 
   const handleClick = (index: number) => {
     setButtonToggele(buttonToggele === index ? -1 : index);
+  }
+
+  const handleClickPledge = (index: number) => {
+    setButtonToggelePledge(buttonToggelePledge === index ? -1 : index);
   }
 
   return (
@@ -32,9 +44,8 @@ const DetailBackThisProject = () => {
                                                          :
                                                          `${styles.details__projects__upper__and__lower}
                                                          ${styles.details__projects__upper__and__lower__without__border__bottom}`
-                                                        }
-                   onClick={() => handleClick(index)}>
-                <div key={index} className={styles.details__projects}>
+                                                        }>
+                <div key={index} className={styles.details__projects} onClick={() => handleClick(index)}>
                   {
                     // when the index of the loop is same as the state, button is checked (changes the icon from unchecked to checked)
                     buttonToggele === index ? <RadioButtonCheckedIcon /> : <RadioButtonUncheckedIcon />
@@ -50,23 +61,23 @@ const DetailBackThisProject = () => {
                   </div>
                 </div>
                 <span onClick={() => handleClick(index)} className={styles.details__projects__lower}>{el.description}</span>
-              </div>
-              {/* when the bottomToggle's id is the same as the one being clicked, show "Enter your pledge div" */}
+                              {/* when the bottomToggle's id is the same as the one being clicked, show "Enter your pledge div" */}
               {
                 buttonToggele === index ?
                 <>
                   <div className={styles.body__EnterYourPledge}>
-                  <div className={styles.line}></div>
                     <span style={{color: 'grey'}}>Enter your pledge</span>
                     <div className={styles.body__EnterYourPledge__right}>
                       <input type="text" placeholder={'$' + el.minPledge.toString()}/>
-                      <button>Continue</button>
+                      <button onClick={() => handleClickPledge(index)}>Continue</button>
                     </div>
                   </div>
+                  {buttonToggelePledge === index && <ThankYou resetPerkSelection={resetPledgeSelection}/>}
                 </>
               :
                 <></>
               }
+              </div>
             </div>
         )})
       }
