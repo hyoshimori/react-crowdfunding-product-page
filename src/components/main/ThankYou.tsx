@@ -5,20 +5,21 @@ import CheckIcon from "@mui/icons-material/Check";
 import styles from "../style/ThankYou.module.css";
 
 interface ThankYouProps {
-  resetPerkSelection?: () => void;
-  resetPledgeSelection?: () => void;
+  resetPerkSelection: () => void;
 }
 
+interface DetailBackThisProjectProps {
+  backThisProjectClick: () => void;
+}
 
 // This thankYouProps does not return anything (so it is 'void') because the func is called directly and so it does not need to return anything
-const ThankYou: React.FC<ThankYouProps> = ({ resetPerkSelection, resetPledgeSelection }) => {
+const ThankYou: React.FC<ThankYouProps & DetailBackThisProjectProps> = ({ resetPerkSelection, backThisProjectClick }) => {
   const [gotItPerk, setgotItPerk] = useState(true);
 
   // when called this, the state in About component is being reset
   const handleButtonClick = () => {
     setgotItPerk(!gotItPerk);
-    resetPerkSelection?.();
-    resetPledgeSelection?.()
+    resetPerkSelection();
   };
 
   return (
