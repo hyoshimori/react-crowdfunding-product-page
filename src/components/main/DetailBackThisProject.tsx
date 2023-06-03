@@ -63,7 +63,7 @@ const DetailBackThisProject: React.FC<DetailBackThisProjectProps> = ({ backThisP
                           <h2>{el.name}</h2>
                           <span>Pledge {el.minPledge} or more</span>
                         </div>
-                        <span>{el.numbersLeft} <span style={{  color: 'grey'}}>left</span></span>
+                        <span className={styles.details__projects__upper__numbers__left}>{el.numbersLeft} <span style={{  color: 'grey', marginLeft: '10px'}}>left</span></span>
                       </div>
                     </div>
                   </div>

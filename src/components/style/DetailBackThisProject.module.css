@@ -30,10 +30,10 @@
 }
 
 .details__projects__upper__name__and__price{
-  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
 }
 
 .details__projects__upper__name__and__price span{
@@ -52,6 +52,7 @@
   flex-direction: row;
   align-items: center;
   padding: 20px 20px;
+  box-sizing: border-box;
 }
 
 span.details__projects__lower{
@@ -136,4 +137,8 @@ span.details__projects__lower{
   display: flex;
   justify-content: flex-end;
   width: 100%;
+}
+
+.details__projects__upper__numbers__left{
+  display: flex;
 }
