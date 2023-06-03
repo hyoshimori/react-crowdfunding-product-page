@@ -1,17 +1,39 @@
 .body{
   padding: 20px;
+  width: 70vw;
+  margin: 0 auto;
+  position: fixed;
+  background-color: white;
+  top: 10vh;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  border-radius: 5px;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* black with 50% opacity */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* ensure it's below the body */
 }
 
 .details__projects__upper{
   display: flex;
-  width: 45vw;
+  box-sizing: border-box;
+  min-height: 100%;
   align-items: center;
-  justify-content: space-between;
+  background-color: #3EB3AC;
 }
 
 .details__projects__upper__name__and__price{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .details__projects__upper__name__and__price span{
@@ -30,6 +52,7 @@
   flex-direction: row;
   align-items: center;
   padding: 20px 20px;
+  box-sizing: border-box;
 }
 
 span.details__projects__lower{
@@ -104,4 +127,18 @@ span.details__projects__lower{
 
 .body__EnterYourPledge__border__bottom__none{
   border-bottom: none;
+}
+
+.button{
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.details__projects__upper__numbers__left{
+  display: flex;
 }

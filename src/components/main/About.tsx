@@ -9,6 +9,8 @@ import * as perkTypes from '../../../types/perk';
 const About = () => {
   const [selectedPerk, setSelectedPerk] = useState(-1); // Start with no perk selected
 
+  const backThisProjectClick = () => {};
+
   // perk mock up data as this is only the front end app //
   const perks: perkTypes.Perk[] = [
     {
@@ -64,7 +66,7 @@ const About = () => {
             <button className={styles.button} onClick={() => handleButtonClick(index)}>Select Details</button>
           </div>
           {/* if the index selected is same as the index in the state */}
-          {selectedPerk === index && <ThankYou resetPerkSelection={resetPerkSelection}/>}
+          {selectedPerk === index && <ThankYou resetPerkSelection={resetPerkSelection} backThisProjectClick={backThisProjectClick}/>}
         </div>
       ))}
     </div>
