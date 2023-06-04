@@ -53,20 +53,20 @@ const DetailBackThisProject: React.FC<DetailBackThisProjectProps> = ({ backThisP
                                                           ${styles.details__projects__upper__and__lower__without__border__bottom}`
                                                           }>
                   <div key={index} className={styles.details__projects} onClick={() => handleClick(index)}>
-                    {
-                      // when the index of the loop is same as the state, button is checked (changes the icon from unchecked to checked)
-                      buttonToggele === index ? <RadioButtonCheckedIcon /> : <RadioButtonUncheckedIcon />
-                    }
-                    <div>
-                      <div className={styles.details__projects__upper}>
-                        <div className={styles.details__projects__upper__name__and__price}>
-                          <h2>{el.name}</h2>
-                          <span>Pledge {el.minPledge} or more</span>
-                        </div>
-                        <span className={styles.details__projects__upper__numbers__left}>{el.numbersLeft} <span style={{  color: 'grey', marginLeft: '10px'}}>left</span></span>
+                    <div className={styles.details__projects__upper}>
+                      {
+                        // when the index of the loop is same as the state, button is checked (changes the icon from unchecked to checked)
+                        buttonToggele === index ? <RadioButtonCheckedIcon className={styles.buttons}/> : <RadioButtonUncheckedIcon className={styles.buttons}/>
+                      }
+                      <div className={styles.details__projects__upper__name__and__price}>
+                        <h2>{el.name}</h2>
+                        <span>Pledge {el.minPledge} or more</span>
                       </div>
+                      <span className={styles.details__projects__upper__numbers__left}>{el.numbersLeft} <span style={{  color: 'grey', marginLeft: '10px'}}>left</span></span>
                     </div>
                   </div>
+
+                  
                   <span onClick={() => handleClick(index)} className={styles.details__projects__lower}>{el.description}</span>
                                 {/* when the bottomToggle's id is the same as the one being clicked, show "Enter your pledge div" */}
                 {

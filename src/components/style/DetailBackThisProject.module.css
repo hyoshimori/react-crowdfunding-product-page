@@ -26,13 +26,12 @@
   box-sizing: border-box;
   min-height: 100%;
   align-items: center;
-  background-color: #3EB3AC;
+  position: relative;
 }
 
 .details__projects__upper__name__and__price{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   width: 100%;
 }
 
@@ -42,15 +41,13 @@
 
 .details__projects__upper__name__and__price span,
 .details__projects__upper__name__and__price h2{
-  margin-left: 20px;
+  margin-left: 40px;
   font-size: 1rem;
   font-weight: 700;
 }
 
 .details__projects{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  
   padding: 20px 20px;
   box-sizing: border-box;
 }
@@ -141,4 +138,9 @@ span.details__projects__lower{
 
 .details__projects__upper__numbers__left{
   display: flex;
+}
+
+.buttons{
+  position: absolute;
+  top: -2px;
 }
